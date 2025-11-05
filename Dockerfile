@@ -20,6 +20,7 @@ RUN npm ci --only=production
 
 COPY --from=development /app/dist ./dist
 
-EXPOSE 3000
+# 포트는 환경 변수에서 읽으므로 EXPOSE는 선택사항 (문서화 목적)
+EXPOSE 5001
 
 CMD ["node", "dist/src/main.js"]

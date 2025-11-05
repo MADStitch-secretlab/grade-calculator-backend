@@ -4,37 +4,36 @@ services:
   nestjs-backend:
     build:
       context: .
-      target: development
+      target: production
     container_name: grade-calculator-backend
     ports:
-      - "3000:3000"
+      - "5001:5001"
     environment:
-      - NODE_ENV=development
-      - GPA_SIMULATOR_URL=http://gpa-simulator:8000
-      - PORT=3000
-    volumes:
-      - .:/app
-      - /app/node_modules
-    depends_on:
-      - gpa-simulator
+      - NODE_ENV=production
+      - GPA_SIMULATOR_URL=https://port-0-grade-calculator-model-m4h5z3nf13944b7f.sel4.cloudtype.app
+      - PORT=5001
+      # Supabase 환경 변수는 배포 플랫폼에서 설정하거나 여기에 추가
+      # - SUPABASE_URL=${SUPABASE_URL}
+      # - SUPABASE_KEY=${SUPABASE_KEY}
+      # - OPENAI_API_KEY=${OPENAI_API_KEY}
+    # 배포 환경에서는 volumes 제거 (빌드된 파일 사용)
+    # volumes:
+    #   - .:/app
+    #   - /app/node_modules
+    # 외부 URL 사용하므로 depends_on 제거
+    # depends_on:
+    #   - gpa-simulator
     networks:
       - app-network
-    command: npm run start:dev
-
-  # Python GPA Simulator (분석 모델 서버)
-  # 실제 Python 서버가 있다면 아래 주석을 해제하고 설정 조정
-  # gpa-simulator:
-  #   build: ../analysis-model
-  #   container_name: gpa-simulator
-  #   expose:
-  #     - "8000"
-  #   networks:
-  #     - app-network
-  #   healthcheck:
-  #     test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-  #     interval: 30s
-  #     timeout: 5s
-  #     retries: 3
+    # production 빌드된 파일 사용 (Dockerfile의 CMD 사용)
+    # command는 Dockerfile의 CMD 사용
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:5001/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
 networks:
   app-network:

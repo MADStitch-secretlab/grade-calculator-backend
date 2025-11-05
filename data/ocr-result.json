@@ -1,0 +1,367 @@
+{
+  "university": "공과대학",
+  "student_name": "임동혁",
+  "student_id": "12190584",
+  "major": "조선해양공학",
+  "double_major": null,
+  "minor": null,
+  "subjects": [
+    {
+      "name": "일반화학",
+      "credits": 3,
+      "grade": "C+",
+      "type": "교필",
+      "semester": "2019학년도 1학기"
+    },
+    {
+      "name": "프로네시스 세미나 Ⅰ : 가치형성과 진로탐색",
+      "credits": 1,
+      "grade": "P",
+      "type": "교필",
+      "semester": "2019학년도 1학기"
+    },
+    {
+      "name": "이공계열 글쓰기와 토론",
+      "credits": 3,
+      "grade": "C+",
+      "type": "교필",
+      "semester": "2019학년도 1학기"
+    },
+    {
+      "name": "생활한문",
+      "credits": 1,
+      "grade": "C+",
+      "type": "교필",
+      "semester": "2019학년도 1학기"
+    },
+    {
+      "name": "기초수학",
+      "credits": 3,
+      "grade": "P",
+      "type": "교선",
+      "semester": "2019학년도 1학기"
+    },
+    {
+      "name": "조선해양공학개론",
+      "credits": 3,
+      "grade": "RE",
+      "type": "전선",
+      "semester": "2019학년도 1학기"
+    },
+    {
+      "name": "물리학 1",
+      "credits": 3,
+      "grade": "RE",
+      "type": "교필",
+      "semester": "2019학년도 1학기"
+    },
+    {
+      "name": "물리학실험 1",
+      "credits": 1,
+      "grade": "B0",
+      "type": "교필",
+      "semester": "2019학년도 1학기"
+    },
+    {
+      "name": "C언어",
+      "credits": 3,
+      "grade": "C+",
+      "type": "교필",
+      "semester": "2019학년도 2학기"
+    },
+    {
+      "name": "의사소통 영어",
+      "credits": 3,
+      "grade": "C+",
+      "type": "교필",
+      "semester": "2019학년도 2학기"
+    },
+    {
+      "name": "크로스오버 1 : 인간의 탐색",
+      "credits": 2,
+      "grade": "P",
+      "type": "교필",
+      "semester": "2019학년도 2학기"
+    },
+    {
+      "name": "일반수학 2",
+      "credits": 3,
+      "grade": "RE",
+      "type": "교필",
+      "semester": "2019학년도 2학기"
+    },
+    {
+      "name": "창의적공학설계",
+      "credits": 3,
+      "grade": "A0",
+      "type": "전선",
+      "semester": "2019학년도 2학기"
+    },
+    {
+      "name": "정역학",
+      "credits": 3,
+      "grade": "RE",
+      "type": "전선",
+      "semester": "2019학년도 2학기"
+    },
+    {
+      "name": "물리학 2",
+      "credits": 3,
+      "grade": "B0",
+      "type": "교필",
+      "semester": "2019학년도 2학기"
+    },
+    {
+      "name": "물리학실험 2",
+      "credits": 1,
+      "grade": "B0",
+      "type": "교필",
+      "semester": "2019학년도 2학기"
+    },
+    {
+      "name": "정보사회와컴퓨터",
+      "credits": 3,
+      "grade": "B0",
+      "type": "교필",
+      "semester": "2020학년도 1학기"
+    },
+    {
+      "name": "공업수학 1",
+      "credits": 3,
+      "grade": "RE",
+      "type": "교필",
+      "semester": "2020학년도 1학기"
+    },
+    {
+      "name": "일반화학실험",
+      "credits": 1,
+      "grade": "B0",
+      "type": "교필",
+      "semester": "2020학년도 1학기"
+    },
+    {
+      "name": "크로스오버 3 : 사회의 탐색",
+      "credits": 2,
+      "grade": "P",
+      "type": "교필",
+      "semester": "2020학년도 1학기"
+    },
+    {
+      "name": "일반수학 1",
+      "credits": 3,
+      "grade": "B0",
+      "type": "교필",
+      "semester": "2020학년도 1학기"
+    },
+    {
+      "name": "동역학",
+      "credits": 3,
+      "grade": "RE",
+      "type": "전필",
+      "semester": "2020학년도 1학기"
+    },
+    {
+      "name": "재료역학",
+      "credits": 3,
+      "grade": "B0",
+      "type": "전필",
+      "semester": "2020학년도 1학기"
+    },
+    {
+      "name": "조선해양공학세미나 1",
+      "credits": 1,
+      "grade": "P",
+      "type": "전필",
+      "semester": "2020학년도 1학기"
+    },
+    {
+      "name": "공업수학 2",
+      "credits": 3,
+      "grade": "C0",
+      "type": "교필",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "국제관계학개론",
+      "credits": 3,
+      "grade": "B0",
+      "type": "교선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "수영",
+      "credits": 1,
+      "grade": "A+",
+      "type": "교선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "일반수학 2",
+      "credits": 3,
+      "grade": "B+",
+      "type": "교필",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "정역학",
+      "credits": 3,
+      "grade": "A0",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "유체역학",
+      "credits": 3,
+      "grade": "B+",
+      "type": "전필",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "선박계산",
+      "credits": 3,
+      "grade": "B0",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "조선해양공학개론",
+      "credits": 3,
+      "grade": "A0",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "동역학",
+      "credits": 3,
+      "grade": "A0",
+      "type": "전필",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "열역학",
+      "credits": 3,
+      "grade": "B+",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "IT융합공학 및 실습",
+      "credits": 3,
+      "grade": "A+",
+      "type": "전필",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "조선해양공학세미나 2",
+      "credits": 1,
+      "grade": "P",
+      "type": "전필",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "수치해석",
+      "credits": 3,
+      "grade": "A+",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "연구실인턴십",
+      "credits": 3,
+      "grade": "P",
+      "type": "일선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "선박유체실험",
+      "credits": 3,
+      "grade": "B0",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "구조역학실험",
+      "credits": 3,
+      "grade": "A+",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "생산시스템공학",
+      "credits": 3,
+      "grade": "A0",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "조선해양CAE활용",
+      "credits": 3,
+      "grade": "A0",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "열전달",
+      "credits": 3,
+      "grade": "B+",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "실용영어 L/S",
+      "credits": 3,
+      "grade": "B+",
+      "type": "교선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "선박저항론",
+      "credits": 3,
+      "grade": "C+",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "조선해양연구프로젝트 1",
+      "credits": 1,
+      "grade": "F",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "조선해양기술/경영특강",
+      "credits": 3,
+      "grade": "B+",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "선박기본설계",
+      "credits": 3,
+      "grade": "B0",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "해저파이프라인",
+      "credits": 3,
+      "grade": "B+",
+      "type": "전선",
+      "semester": "2022학년도 2학기"
+    },
+    {
+      "name": "마케팅인사이트",
+      "credits": 3,
+      "grade": "-",
+      "type": "일선",
+      "semester": "2025학년도 1학기"
+    }
+  ],
+  "total_credits": 127,
+  "gpa": 3.23,
+  "db_save_result": {
+    "success": true,
+    "saved": 0,
+    "errors": 50
+  }
+}

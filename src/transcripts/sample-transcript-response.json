@@ -1,0 +1,98 @@
+{
+  "university": "서울대학교",
+  "student_name": "홍길동",
+  "student_id": "2024001234",
+  "major": "컴퓨터공학부",
+  "double_major": null,
+  "minor": null,
+  "scale_max": 4.5,
+  "G_t": 4.2,
+  "C_tot": 130,
+  "history": [
+    {
+      "term_id": "2023-1",
+      "credits": 18,
+      "achieved_avg": 3.8
+    },
+    {
+      "term_id": "2023-2",
+      "credits": 18,
+      "achieved_avg": 3.9
+    },
+    {
+      "term_id": "2024-1",
+      "credits": 19,
+      "achieved_avg": 4.1
+    },
+    {
+      "term_id": "2024-2",
+      "credits": 18,
+      "achieved_avg": 4.3
+    }
+  ],
+  "terms": [
+    {
+      "id": "2025-1",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "2025-2",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "2025-S",
+      "type": "summer",
+      "planned_credits": 6,
+      "max_credits": 9
+    }
+  ],
+  "subjects": [
+    {
+      "name": "컴퓨터구조",
+      "credits": 3,
+      "grade": "A+",
+      "type": "전필",
+      "semester": "2023-1"
+    },
+    {
+      "name": "자료구조",
+      "credits": 3,
+      "grade": "A",
+      "type": "전필",
+      "semester": "2023-1"
+    },
+    {
+      "name": "알고리즘",
+      "credits": 3,
+      "grade": "A+",
+      "type": "전선",
+      "semester": "2023-2"
+    },
+    {
+      "name": "데이터베이스",
+      "credits": 3,
+      "grade": "A",
+      "type": "전선",
+      "semester": "2024-1"
+    },
+    {
+      "name": "운영체제",
+      "credits": 3,
+      "grade": "A+",
+      "type": "전필",
+      "semester": "2024-2"
+    },
+    {
+      "name": "영어회화",
+      "credits": 2,
+      "grade": "B+",
+      "type": "교필",
+      "semester": "2023-1"
+    }
+  ]
+}
+

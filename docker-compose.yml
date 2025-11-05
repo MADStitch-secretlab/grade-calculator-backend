@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  nestjs-backend:
+    build:
+      context: .
+      target: development
+    container_name: grade-calculator-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - GPA_SIMULATOR_URL=http://gpa-simulator:8000
+      - PORT=3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - gpa-simulator
+    networks:
+      - app-network
+    command: npm run start:dev
+
+  # Python GPA Simulator (분석 모델 서버)
+  # 실제 Python 서버가 있다면 아래 주석을 해제하고 설정 조정
+  # gpa-simulator:
+  #   build: ../analysis-model
+  #   container_name: gpa-simulator
+  #   expose:
+  #     - "8000"
+  #   networks:
+  #     - app-network
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+  #     interval: 30s
+  #     timeout: 5s
+  #     retries: 3
+
+networks:
+  app-network:
+    driver: bridge

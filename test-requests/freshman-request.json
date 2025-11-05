@@ -1,0 +1,56 @@
+{
+  "scale_max": 4.5,
+  "G_t": 4.0,
+  "C_tot": 130,
+  "history": [],
+  "terms": [
+    {
+      "id": "S1",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S2",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S3",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S4",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S5",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S6",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S7",
+      "type": "regular",
+      "planned_credits": 18,
+      "max_credits": 21
+    },
+    {
+      "id": "S8",
+      "type": "regular",
+      "planned_credits": 4,
+      "max_credits": 21
+    }
+  ]
+}

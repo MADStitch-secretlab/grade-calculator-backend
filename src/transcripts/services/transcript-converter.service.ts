@@ -142,25 +142,43 @@ export class TranscriptConverterService {
     });
 
     // 4. history 배열 생성 (과거 학기 이력)
-    const history = sortedSemesters.map((semester) => {
-      const data = semesterMap.get(semester)!;
-      const termId = this.semesterToTermId(semester, semesterOrder);
+    const history = sortedSemesters
+      .map((semester) => {
+        const data = semesterMap.get(semester)!;
+        const termId = this.semesterToTermId(semester, semesterOrder);
 
-      // 학기 평균 GPA 계산 (등급이 있는 과목만으로 계산)
-      const achievedAvg =
-        data.gradeableCredits > 0 && data.totalGradePoints > 0
-          ? data.totalGradePoints / data.gradeableCredits
-          : 0;
+        // 학기 평균 GPA 계산 (등급이 있는 과목만으로 계산)
+        const achievedAvg =
+          data.gradeableCredits > 0 && data.totalGradePoints > 0
+            ? data.totalGradePoints / data.gradeableCredits
+            : 0;
 
-      return {
-        term_id: termId,
-        credits: data.credits, // 전체 이수 학점 (P/NP 포함)
-        achieved_avg: Math.round(achievedAvg * 100) / 100, // 소수점 2자리
-      };
-    });
+        const historyItem = {
+          term_id: termId,
+          credits: data.credits, // 전체 이수 학점 (P/NP 포함)
+          achieved_avg: Math.round(achievedAvg * 100) / 100, // 소수점 2자리
+        };
+
+        this.logger.log(
+          `학기 ${semester} (${termId}): credits=${historyItem.credits}, avg=${historyItem.achieved_avg}, 과목수=${data.count}`,
+        );
+
+        return historyItem;
+      })
+      .filter((item) => {
+        // credits가 0.1 미만인 학기는 제외 (validation 통과 위해)
+        if (item.credits < 0.1) {
+          this.logger.warn(
+            `학기 ${item.term_id}는 학점이 ${item.credits}로 0.1 미만이므로 제외됩니다.`,
+          );
+          return false;
+        }
+        return true;
+      });
 
     // 5. future terms 생성 (사용자가 제공하지 않으면 기본값)
-    const terms = futureTerms || this.generateDefaultFutureTerms(sortedSemesters.length);
+    // 필터링 후 실제 history 길이를 사용
+    const terms = futureTerms || this.generateDefaultFutureTerms(history.length);
 
     // 6. 최종 변환 결과
     const result: SimulationInputDto = {

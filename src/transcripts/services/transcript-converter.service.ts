@@ -61,10 +61,10 @@ export class TranscriptConverterService {
    */
   private groupSubjectsBySemester(
     subjects: SubjectDto[],
-  ): Map<string, { credits: number; totalGradePoints: number; count: number }> {
+  ): Map<string, { credits: number; gradeableCredits: number; totalGradePoints: number; count: number }> {
     const semesterMap = new Map<
       string,
-      { credits: number; totalGradePoints: number; count: number }
+      { credits: number; gradeableCredits: number; totalGradePoints: number; count: number }
     >();
 
     for (const subject of subjects) {
@@ -74,6 +74,7 @@ export class TranscriptConverterService {
       if (!semesterMap.has(normalizedSemester)) {
         semesterMap.set(normalizedSemester, {
           credits: 0,
+          gradeableCredits: 0,
           totalGradePoints: 0,
           count: 0,
         });
@@ -82,10 +83,12 @@ export class TranscriptConverterService {
       const semesterData = semesterMap.get(normalizedSemester)!;
       semesterData.count += 1;
 
-      // 학점이 포함된 성적만 계산 (P, NP, S, U 등은 제외)
-      // 등급 점수가 있는 과목만 학점과 점수 모두 합산
+      // 모든 과목의 학점을 credits에 합산 (전체 이수 학점)
+      semesterData.credits += subject.credits || 0;
+
+      // 등급이 있는 과목만 GPA 계산에 포함 (P, NP, S, U 등은 제외)
       if (gradePoint !== null && subject.credits) {
-        semesterData.credits += subject.credits;
+        semesterData.gradeableCredits += subject.credits;
         semesterData.totalGradePoints += gradePoint * subject.credits;
       }
     }
@@ -142,16 +145,16 @@ export class TranscriptConverterService {
     const history = sortedSemesters.map((semester) => {
       const data = semesterMap.get(semester)!;
       const termId = this.semesterToTermId(semester, semesterOrder);
-      
-      // 학기 평균 GPA 계산
+
+      // 학기 평균 GPA 계산 (등급이 있는 과목만으로 계산)
       const achievedAvg =
-        data.credits > 0 && data.totalGradePoints > 0
-          ? data.totalGradePoints / data.credits
+        data.gradeableCredits > 0 && data.totalGradePoints > 0
+          ? data.totalGradePoints / data.gradeableCredits
           : 0;
 
       return {
         term_id: termId,
-        credits: data.credits,
+        credits: data.credits, // 전체 이수 학점 (P/NP 포함)
         achieved_avg: Math.round(achievedAvg * 100) / 100, // 소수점 2자리
       };
     });

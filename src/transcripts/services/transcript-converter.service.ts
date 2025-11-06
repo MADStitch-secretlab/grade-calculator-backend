@@ -80,11 +80,12 @@ export class TranscriptConverterService {
       }
 
       const semesterData = semesterMap.get(normalizedSemester)!;
-      semesterData.credits += subject.credits || 0;
       semesterData.count += 1;
 
       // 학점이 포함된 성적만 계산 (P, NP, S, U 등은 제외)
+      // 등급 점수가 있는 과목만 학점과 점수 모두 합산
       if (gradePoint !== null && subject.credits) {
+        semesterData.credits += subject.credits;
         semesterData.totalGradePoints += gradePoint * subject.credits;
       }
     }
